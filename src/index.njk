@@ -1,0 +1,238 @@
+---
+permalink: "index.html"
+---
+
+{% extends "src/base.njk" %}
+
+{% block head %}
+<title>CandiDatos 2023 | Red Ciudadana</title>
+{% endblock %}
+
+{% block content %}
+
+        <!-- Slider
+		============================================= -->
+		<section id="slider" class="slider-element bg-color bg-slider">
+			<div class="container">
+				<div class="row h-100 justify-content-end">
+					<div class="col-lg-6 col-sm-12 d-flex align-self-center flex-column pt-5 pb-0 py-lg-6 mb-20 my-lg-4 ">
+						<h4 class="text-white" style="font-size: 30px; line-height:30px;font-weight: 800">Informate sobre el proceso de las 
+                        elecciones a nivel departamental y municipal</h4>
+						<div>
+							<a href="#" data-bs-toggle="modal" data-bs-target="#modal-signin" class="button">Más Información &nbsp<i class="icon-arrow-right"></i></a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap p-0">
+
+				<!-- Buscador
+				============================================= -->
+
+				<div class="container clearfix mb-100 mt-100">
+					<div class="heading-block center">
+						<h2>Elecciones 2023</h2>
+						<span style="color:#202D3D!important;font-size:16px;line-height:17px">Esta iniciativa busca generar y difundir información clara y confiable sobre el proceso electoral a fin de 
+                        empoderar a la ciudadanía y garantizar así el ejercicio del voto informado</span>
+					</div>
+
+					<div class="row justify-content-center col-mb-50">
+
+                        <div class="field d-flex border-rounded justify-content-center w-100">
+							<a class="link-seleccionador dropdown-toggle seleccionador text-center word-wrap" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Seleccione el distrito de su interés
+							</a>
+							<div class="dropdown-menu list-distritos" aria-labelledby="navbarDropdown">
+								{% for distrito in collections.distritos %}
+								<a class="dropdown-item" href="{{distrito.url}}">{{distrito.data.title}}</a>
+								{% endfor %}
+							</div>
+                        </div>
+
+					</div>
+
+				</div>
+
+				<!-- Distritos
+				============================================= -->
+				<div class="section py-6 my-6"  style="background-color: #f1f2fa;">
+					<div class=" m-0">
+						
+						<div class="row text-center px-6 "  style="justify-content:space-evenly;align-items:flex-start">
+							
+							<div class="p-1 col-xl-5 col-sm-12" style="margin-bottom:1rem">
+								<a href="/distritos/index.html"><div class="p-1 col-lg-12">
+									<div class="shadow bg-white bg-green-hover p-3" >
+										<img style="height:530px!important" src="/elementos/MAPAS HOME/MAPAS-04.png">
+										<h3>Elecciones 2023 &nbsp<img style="height:30px; width:30px" src="/elementos/ICONOS/ICONOS-31.png"></h3>
+									</div>
+								</div></a>
+								
+							</div>
+
+							<div class="col-mb-30 col-xl-7 col-sm-12 ">
+								<div class="row">
+									{% for  distrito in collections.distritos | limit(6)%}
+									<div class="p-1 col-xl-4 col-sm-12" >
+										<a href="{{distrito.url}}"><div class="shadow bg-white bg-green-hover p-3">
+											<img style="height:220px;max-height:80%;width:100%" src="{{distrito.data.fotodistrito}}">
+											<h4>{{distrito.data.title}} <img style="height:30px; width:30px" src="/elementos/ICONOS/ICONOS-31.png"></h4>
+										</div></a>
+									</div>
+									{% endfor %}
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="row px-6 mb-5">
+							<div class="post-md p-1 col-xl-12 col-sm-12 d-flex justify-content-end">
+								<a href="/distritos/index.html"  class="button">Ver todos los distritos &nbsp<i class="icon-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Candidatos ESTA PARTE ES EMBEDED
+				============================================= -->
+				<div class="section py-6"  style="background-color: #fff;">
+					<div class="px-6">
+						<div class="row px-5 justify-content-center">
+							<div class="col-lg-12 p-1">
+								<h2>Candidaturas</h2>
+								<div class="border-green">
+								</div>
+							</div>
+
+							<div class="col-lg-2 p-2">
+								<div class="shadow">
+									<img class="w-100 p-4" src="/elementos/CAN-08.png">
+									<div class="p-2 text-center">
+										<h4 class="m-1">Candidato 1</h4>
+										<p>Presidente</p>
+									</div>
+								</div>
+							</div>	
+
+							<div class="col-lg-2 p-2">
+								<div class="shadow">
+									<img class="w-100 p-4" src="/elementos/CAN-09.png">
+									<div class="p-2 text-center">
+										<h4 class="m-1">Candidato 1</h4>
+										<p>Presidente</p>
+									</div>
+								</div>
+							</div>	
+
+							<div class="col-lg-2 p-2">
+								<div class="shadow">
+									<img class="w-100 p-4" src="/elementos/CAN-08.png">
+									<div class="p-2 text-center">
+										<h4 class="m-1">Candidato 1</h4>
+										<p>Presidente</p>
+									</div>
+								</div>
+							</div>	
+
+							<div class="col-lg-2 p-2">
+								<div class="shadow">
+									<img class="w-100 p-4" src="/elementos/CAN-09.png">
+									<div class="p-2 text-center">
+										<h4 class="m-1">Candidato 1</h4>
+										<p>Presidente</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2 p-2">
+								<div class="shadow">
+									<img class="w-100 p-4" src="/elementos/CAN-09.png">
+									<div class="p-2 text-center">
+										<h4 class="m-1">Candidato 1</h4>
+										<p>Presidente</p>
+									</div>
+								</div>
+							</div>	
+
+						</div>
+					</div>
+				</div>	
+
+				<!-- Blogs y Videos
+				============================================= -->
+			
+				<div class="section m-0 py-6" style="background-color: #f1f2fa;">
+					<div class="row px-4" style="justify-content:space-evenly; ">
+						<div class="col-lg-7">
+							<h2 >Blogs</h2>
+
+							{% for blog in collections.blogs | reverse | limit(5) %}
+					
+				
+							<div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0;">
+								<div class="row" style=" align-items:center; border-top:1px solid #ccc">
+									<div class="col-xl-4 col-lg-3 px-0">
+										<div class="event-img mb-20 center">
+											<a href="{{blog.url}}"><img style="height:100%!important; width:100%!important" src="{{blog.data.image}}" alt=""></a>
+										</div>
+									</div>
+									<div class="col-xl-8 col-lg-8">
+										<div class="event-wrapper mb-20 " >
+											<div class="event-text">
+												<!--span><i class="far fa-map-marked-alt verdeo"></i> Guatemala - 8 de Septiembre 2021</span-->
+												<h3> {{blog.data.title}}</h3>
+											</div>
+											<div class="event-meta">
+												<span><!--i class="far fa-user-circle"></i-->{{blog.data.autor}} | {{blog.data.date | dateFormat('DD/MM/YYYY')}}</span>
+											</div><br>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							{% endfor %}
+
+							<div class="mb-6" style="display:flex; justify-content:flex-end">
+								<a class="button" href="/blogs/index.html">Más Blogs<i class="icon-arrow-right" style="margin-left:5px"></i></a>
+							</div>	
+						</div>
+
+						<div class="col-lg-3">
+							<h3 >Videos</h3>
+
+							{% for video in collections.videos | reverse | limit(4)%}
+							<div class="entry ">
+								<div class="grid-inner">
+									<iframe height="155px" src="{{video.data.link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<p class="txt-video text-center">{{video.data.description}}</p>
+								</div>
+								
+							</div>
+							{% endfor %}
+
+							<div class="mb-6">
+								<div style="display:flex; justify-content:flex-end">
+								<a class="button" href="/podcasts/index.html">Más Videos<i class="icon-arrow-right" style="margin-left:5px"></i></a>
+							</div>	
+						</div>
+					</div>	
+						
+
+				</div>
+			</div>
+
+
+		</section><!-- #content end -->
+   
+{% endblock %}
+
+{% block body_javascripts %}
+
+{% endblock %}

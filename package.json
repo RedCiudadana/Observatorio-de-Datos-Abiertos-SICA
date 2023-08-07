@@ -1,0 +1,29 @@
+{
+  "name": "candidatoscms2023",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RedCiudadana/CandiDatosCMS2023.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RedCiudadana/CandiDatosCMS2023/issues"
+  },
+  "homepage": "https://github.com/RedCiudadana/CandiDatosCMS2023#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0"
+  },
+  "dependencies": {
+    "moment": "^2.29.1",
+    "render-markdown-js": "^1.3.0"
+  }
+}

@@ -1,0 +1,96 @@
+---
+pagination:
+  data: collections.distritos
+  size: 25
+  alias: list
+  reverse: true
+permalink: "distritos/{% if pagination.pageNumber > 0 %}pagina-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+---
+
+{% extends "src/base.njk" %}
+
+{% block head %}
+    <title>CandiDatos | Distritos</title>
+{% endblock %}
+
+{% block content %}
+
+        <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap p-0">
+
+                <!-- Buscador
+				============================================= -->
+
+				<div class="container clearfix mb-100 mt-100">
+					<div class="heading-block center">
+						<h2>Elecciones 2023</h2>
+						<span>Esta iniciativa busca generar y difundir información clara y confiable sobre el proceso electoral a fin de 
+                        empoderar a la ciudadanía y garantizar así el ejercicio del voto informado</span>
+					</div>
+
+					<div class="row justify-content-center col-mb-50">
+
+                        <div class="field d-flex border-rounded justify-content-center w-100">
+							<a class="link-seleccionador dropdown-toggle seleccionador text-center word-wrap" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Seleccione el distrito de su interés
+							</a>
+							<div class="dropdown-menu list-distritos" aria-labelledby="navbarDropdown">
+								{% for distrito in collections.distritos %}
+								<a class="dropdown-item" href="{{distrito.url}}">{{distrito.data.title}}</a>
+								{% endfor %}
+							</div>
+                        </div>
+
+					</div>
+
+				</div>
+
+                <!-- event-area-start -->
+                <div class="event-area pt-120 pb-130" style="margin-top:7rem; padding:3rem 0;background-color:#f1f2fa">
+                    <div class="container">
+                        <div class="row">
+                            
+                            {% if list%}
+                            {% for item in list%}
+                        
+                            <a class="col-lg-3 col-sm-12 p-1" href="{{item.url}}">
+                                <div class="shadow bg-white justify-content-center text-center align-itmes-center p-2" style="width:100%">
+                                
+                                    <img style="height:180px;max-height:80%;width:100%" src="{{item.data.fotodistrito}}">
+                                    <h3>{{item.data.title}} <img style="height:30px; width:30px" src="/elementos/ICONOS/ICONOS-31.png"></h3>
+
+                                </div>
+                            </a>
+                        
+                            {% endfor %}
+                            {% endif %}
+
+                        </div>
+
+                        <div class="d-flex justify-content-center">
+                            {% if pagination.href.previous %}
+                            <div class="mx-4">
+                                {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">← Blogs más recientes</a>{% else %}←  Nuevos blog{% endif %}
+                            </div>
+                            {% endif %}
+                            {% if pagination.href.next %}
+                            <div class="mx-4">
+                                {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Blogs anteriores →</a>{% else %}Blog anteriores →{% endif %}
+                            </div>
+                            {% endif %}
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+{% endblock %}
+
+{% block body_javascripts %}
+
+{% endblock %}
