@@ -5,7 +5,7 @@ permalink: "index.html"
 {% extends "src/base.njk" %}
 
 {% block head %}
-<title>CandiDatos 2023 | Red Ciudadana</title>
+<title>SICA | Red Ciudadana</title>
 {% endblock %}
 
 {% block content %}
@@ -14,13 +14,16 @@ permalink: "index.html"
 		============================================= -->
 		<section id="slider" class="slider-element bg-color bg-slider">
 			<div class="container">
-				<div class="row h-100 justify-content-end">
+				<div class="row h-100">
 					<div class="col-lg-6 col-sm-12 d-flex align-self-center flex-column pt-5 pb-0 py-lg-6 mb-20 my-lg-4 ">
-						<h4 class="text-white" style="font-size: 30px; line-height:30px;font-weight: 800">Informate sobre el proceso de las 
-                        elecciones a nivel departamental y municipal</h4>
+						<h4 class="text-white" style="font-size: 45px; line-height:45px;font-weight: 800">Índice de datos abiertos<span class="text-white" style="margin-left:10px;font-size: 45px; line-height:45px;font-weight: 400">2023-SICA</span></h4>
+						<p class="text-white" style="font-size:25px;line-height:25px;font-weight:300">Lorem ipsum dolor sit amet, consecteteur Lorem ipsum dolor sit amet, consecteteur </p>
 						<div>
-							<a href="#" data-bs-toggle="modal" data-bs-target="#modal-signin" class="button">Más Información &nbsp<i class="icon-arrow-right"></i></a>
+							<a href="#" class="btn_sica">Ver más &nbsp<i class="icon-arrow-right"></i></a>
 						</div>
+					</div>
+					<div class="col-lg-6 col-sm-12 d-flex align-self-center flex-column pt-5 pb-0 py-lg-6 mb-20 my-lg-4 ">
+						<img src="/elementos/06_SLIDER/SICA-10.png">
 					</div>
 
 				</div>
@@ -49,9 +52,7 @@ permalink: "index.html"
 								Seleccione el distrito de su interés
 							</a>
 							<div class="dropdown-menu list-distritos" aria-labelledby="navbarDropdown">
-								{% for distrito in collections.distritos %}
-								<a class="dropdown-item" href="{{distrito.url}}">{{distrito.data.title}}</a>
-								{% endfor %}
+
 							</div>
                         </div>
 
@@ -78,14 +79,7 @@ permalink: "index.html"
 
 							<div class="col-mb-30 col-xl-7 col-sm-12 ">
 								<div class="row">
-									{% for  distrito in collections.distritos | limit(6)%}
-									<div class="p-1 col-xl-4 col-sm-12" >
-										<a href="{{distrito.url}}"><div class="shadow bg-white bg-green-hover p-3">
-											<img style="height:220px;max-height:80%;width:100%" src="{{distrito.data.fotodistrito}}">
-											<h4>{{distrito.data.title}} <img style="height:30px; width:30px" src="/elementos/ICONOS/ICONOS-31.png"></h4>
-										</div></a>
-									</div>
-									{% endfor %}
+	
 								</div>
 
 							</div>
@@ -173,31 +167,7 @@ permalink: "index.html"
 						<div class="col-lg-7">
 							<h2 >Blogs</h2>
 
-							{% for blog in collections.blogs | reverse | limit(5) %}
-					
-				
-							<div class="event-bg event-bg-03 pos-rel mb-30" style="margin:1rem 0;">
-								<div class="row" style=" align-items:center; border-top:1px solid #ccc">
-									<div class="col-xl-4 col-lg-3 px-0">
-										<div class="event-img mb-20 center">
-											<a href="{{blog.url}}"><img style="height:100%!important; width:100%!important" src="{{blog.data.image}}" alt=""></a>
-										</div>
-									</div>
-									<div class="col-xl-8 col-lg-8">
-										<div class="event-wrapper mb-20 " >
-											<div class="event-text">
-												<!--span><i class="far fa-map-marked-alt verdeo"></i> Guatemala - 8 de Septiembre 2021</span-->
-												<h3> {{blog.data.title}}</h3>
-											</div>
-											<div class="event-meta">
-												<span><!--i class="far fa-user-circle"></i-->{{blog.data.autor}} | {{blog.data.date | dateFormat('DD/MM/YYYY')}}</span>
-											</div><br>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							{% endfor %}
+							
 
 							<div class="mb-6" style="display:flex; justify-content:flex-end">
 								<a class="button" href="/blogs/index.html">Más Blogs<i class="icon-arrow-right" style="margin-left:5px"></i></a>
@@ -207,15 +177,6 @@ permalink: "index.html"
 						<div class="col-lg-3">
 							<h3 >Videos</h3>
 
-							{% for video in collections.videos | reverse | limit(4)%}
-							<div class="entry ">
-								<div class="grid-inner">
-									<iframe height="155px" src="{{video.data.link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									<p class="txt-video text-center">{{video.data.description}}</p>
-								</div>
-								
-							</div>
-							{% endfor %}
 
 							<div class="mb-6">
 								<div style="display:flex; justify-content:flex-end">

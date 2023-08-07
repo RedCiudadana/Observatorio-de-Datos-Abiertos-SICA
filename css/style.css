@@ -89,40 +89,29 @@
 ---------------------------------------------------------------- */
 
 @font-face {
-  font-family: "Metropolis-Black";
+  font-family: "Aileron-Black";
 
-  src: url("elementos/ELEMENTOS/FONT/Metropolis-Black.otf");
+  src: url("elementos/03_FUENTE/Aileron-Black.otf");
 }
 
 @font-face {
-  font-family: "Metropolis-Bold";
+  font-family: "Aileron-Bold";
 
-  src: url("elementos/ELEMENTOS/FONT/Metropolis-Bold.otf");
+  src: url("elementos/03_FUENTE/Aileron-Bold.otf");
 }
 
 @font-face {
-  font-family: "Metropolis-ExtraBold";
+  font-family: "Aileron-Regular";
 
-  src: url("elementos/ELEMENTOS/FONT/Metropolis-ExtraBold.otf");
+  src: url("elementos/03_FUENTE/Aileron-Regular.otf");
 }
 
 @font-face {
-  font-family: "Metropolis-Medium";
+  font-family: "Aileron-Semibold";
 
-  src: url("elementos/ELEMENTOS/FONT/Metropolis-Medium.otf");
+  src: url("elementos/03_FUENTE/Aileron-Semibold.otf");
 }
 
-@font-face {
-  font-family: "Metropolis-Regular";
-
-  src: url("elementos/ELEMENTOS/FONT/Metropolis-Regular.otf");
-}
-
-@font-face {
-  font-family: "Metropolis-SemiBold";
-
-  src: url("elementos/ELEMENTOS/FONT/Metropolis-SemiBold.otf");
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
 
@@ -217,13 +206,13 @@ li {
 body {
   line-height: 1.5;
   color: #202D3D;
-  font-family: "Metropolis-Regular", sans-serif !important;
+  font-family: "Aileron-Regular", sans-serif !important;
 }
 
 a {
   text-decoration: none !important;
   color: #1abc9c;
-  font-family: 'Hind Siliguri', sans-serif;
+  font-family: 'Aileron-Regular', sans-serif;
 }
 
 a:hover {
@@ -258,7 +247,7 @@ h6 {
   font-weight: 600;
   line-height: 1.5;
   margin: 0 0 30px 0;
-  font-family: "Metropolis-Bold", sans-serif !important;
+  font-family: "Aileron-Bold", sans-serif !important;
 }
 
 h5,
@@ -341,7 +330,7 @@ form {
 }
 
 small {
-  font-family: "Metropolis-Regular", sans-serif;
+  font-family: "Aileron-Regular", sans-serif;
 }
 
 @media (max-width: 1200px) {
@@ -19762,7 +19751,7 @@ select {
 }
 
 .bg-slider{
-  background-image:url('/elementos/SLIDER/WEB_CANDIDATOS_2023-25.png');
+  background-image:url('/elementos/06_SLIDER/SICA-09.png');
   background-size:cover;
 }
 
@@ -19852,7 +19841,10 @@ select {
   color: #fff!important;
 }
 
-.distritos > div > ul{
-  list-style: disc;
-  margin-left: 20px;
+.btn_sica{
+  color: #fff!important;
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 10px;
+  border-radius: 20%/50%;
 }

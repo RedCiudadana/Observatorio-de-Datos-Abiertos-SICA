@@ -1,5 +1,5 @@
 {
-  "name": "candidatoscms2023",
+  "name": "sica",
   "version": "1.0.0",
   "description": "",
   "main": ".eleventy.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RedCiudadana/CandiDatosCMS2023.git"
+    "url": "git+https://github.com/RedCiudadana/SICA.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RedCiudadana/CandiDatosCMS2023/issues"
+    "url": "https://github.com/RedCiudadana/SICA/issues"
   },
-  "homepage": "https://github.com/RedCiudadana/CandiDatosCMS2023#readme",
+  "homepage": "https://github.com/RedCiudadana/SICA#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0"
   },
