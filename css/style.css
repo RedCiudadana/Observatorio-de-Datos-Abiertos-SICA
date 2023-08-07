@@ -19744,11 +19744,12 @@ select {
 }
 
 .nav-link{
-  color:#202D3D!important
+  color:#202D3D!important;
+  transition: 0.3s
 }
 
 .nav-link:hover{
-  color:#1FC68B!important
+  color:#587cfb!important
 }
 
 .bg-slider{
@@ -19847,7 +19848,7 @@ select {
   background-color: transparent;
   border: 2px solid #fff;
   padding: 10px;
-  border-radius: 20%/50%;
+  border-radius: 15%/50%;
 }
 
 .btn_sica_blue{
@@ -19855,7 +19856,7 @@ select {
   background-color: #587cfb;
   border: 2px solid #587cfb;
   padding: 10px;
-  border-radius: 20%/50%;
+  border-radius: 15%/50%;
 }
 
 .redes_sica{
@@ -19865,4 +19866,27 @@ select {
   width: 45px;
   height: 45px;
   margin: 20px 10px;
+}
+
+.contact_form{
+  width: 100%;
+}
+
+.contact_form input{
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #46495f
+}
+
+.contact_form textarea{
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #46495f
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #46495f!important;
+  opacity: 1; /* Firefox */
 }

@@ -1,0 +1,128 @@
+---
+permalink: "contacto/index.html"
+---
+
+{% extends "src/base.njk" %}
+
+{% block head %}
+<title>SICA Contacto | Red Ciudadana</title>
+{% endblock %}
+
+{% block content %}
+
+        <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+                <!-- contact-address-area-strat -->
+                <div class="container py-4">
+                    <div class="row">
+                        <div class="col-lg-6 col-xl-6 col-sm-12 col-md-12 mb-40">
+                            <h1 style="font-size:30px;font-weight:900" class="mb-20">Para más información de eventos, dudas o de nuestro trabajo</h1>
+                            <p class="mb-20">Llena el siguiente formulario y nuestro equipo te estará contactando</p>
+                            <h4 class="mb-20">Síguenos a través de nuestras redes sociales</h4>
+                            <div class="row pb-30">
+                                <div class="col-lg-12 col-md-12 px-2 col-sm-12 d-flex">
+                                    <a target="_blank" href="https://www.facebook.com/Redciudadanagt"><img width="80%" src="/elementos/REDES-02.png"></a>
+                                    <a target="_blank" href="https://twitter.com/redxguate"><img width="80%" src="/elementos/REDES-03.png"></a>
+                                    <a target="_blank" href="https://www.instagram.com/redxguate/"><img width="80%" src="/elementos/REDES-04.png"></a>
+                                    <a target="_blank" href="https://www.youtube.com/channel/UCQwc62j7beStZYFzwPxBEQg"><img width="80%" src="/elementos/REDES-05.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-6 col-sm-12 col-md-12">
+                            
+                            
+                            <form class="contact_form" id="form" target="_self" onsubmit="return postToForm();" action="" autocomplete="off">
+                                <input id="name" name="entry.1064235632" type="string" required placeholder="Nombre Completo"/>
+                                <input id="email" name="entry.1330832081" type="email" required placeholder="Correo Electrónico"/>
+                                <input id="affair" name="entry.1233483376" type="string" placeholder="Asunto / Motivo de Contacto"/>
+                                <textarea id="message" name="entry.608682247" type="string" required placeholder="Mensaje"></textarea>
+                                <button id="send" type="submit" class="btn_sica_blue">Envíanos un Mensaje</button>
+                            </form>
+
+                            <h3 id="success-msg" style="display:none;"> Su mensaje ha sido enviado</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- acerca de sica
+				============================================= -->
+				<div class="section m-0 py-4"  style="background-color: #fff;">
+					<div class=" container">
+						
+						<div class="row">
+
+							<div class="col-lg-3">
+								<img src="/elementos/04_LOGOTIPOS/SICA-16.png">
+								<div class="row ml-2">
+									<a href="#"><img class="redes_sica" src="/elementos/05_ICONOS/SICA-17.png"></a>
+									<a href="#"><img class="redes_sica" src="/elementos/05_ICONOS/SICA-18.png"></a>
+									<a href="#"><img class="redes_sica" src="/elementos/05_ICONOS/SICA-19.png"></a>
+								</div>
+							</div>
+
+							<div class="col-lg-3">
+								<h4 class="mb-2">Secciones</h4>
+								<a href="#">Conjuntos de Datos</a>
+								<a href="#">Organizaciones</a>
+								<a href="#">Categorías</a>
+								<a href="#">Documentos</a>
+								<a href="#">Ayuda</a>
+								<a href="#">Iniciativas Destacadas</a>
+							</div>
+
+							<div class="col-lg-3">
+								<h4 class="mb-2">Enlaces Internos</h4>
+								<a href="#">Políticas de Privacidad</a>
+								<a href="#">Normativas</a>
+								<a href="#">Habilitación en datos.gob</a>
+								<a href="#">Notificar Error</a>
+							</div>
+							
+							<div class="col-lg-3">
+								<h4 class="mb-2">Ayuda Institucional</h4>
+								<a href="#">Ingreso de Solicitud de Ayuda</a>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+
+		
+{% endblock %}
+
+{% block body_javascripts %}
+        <script>
+            function postToForm() {
+                var field1 = $("#name").val();
+                var field2 = $("#email").val();
+                var field3 = $("#affair").val();
+                var field4 = $("#message").val();
+
+                $.ajax({
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLSe2DNIWZVQugZ_G-rQCzO9EKpWr66ZXe8rbBBHtKYduKIeXyQ/formResponse?",
+					data: {"entry.1064235632": field1, "entry.1330832081": field2, "entry.1233483376": field3, "entry.608682247": field4},
+                    type: "POST",
+                    dataType: "xml",
+                    success: function(d)
+					{
+					},
+					error: function(x, y, z)
+						{
+
+							$('#success-msg').show();
+							$('#form').hide();
+							
+						}
+                });
+				return false;
+            }
+        </script>
+
+{% endblock %}
