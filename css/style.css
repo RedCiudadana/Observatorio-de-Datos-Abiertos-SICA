@@ -19850,6 +19850,7 @@ select {
   padding: 10px;
   border-radius: 15%/50%;
   transition: 0.3s;
+  margin: 0 5px;
 }
 
 .btn_sica_blue{
@@ -19859,6 +19860,7 @@ select {
   padding: 10px;
   border-radius: 15%/50%;
   transition: 0.3s;
+  margin: 0 5px;
 }
 
 .btn_sica_blue2{
@@ -19868,6 +19870,7 @@ select {
   padding: 10px;
   border-radius: 10%/50%;
   transition: 0.3s;
+  margin: 0 5px;
 }
 
 .btn_sica_blue:hover{
@@ -19877,6 +19880,22 @@ select {
 }
 
 .btn_sica_blue2:hover{
+  color: #fff!important;
+  background-color: #4756c3;
+  border-color: #4756c3;
+}
+
+.btn_sica_blueborder2{
+  color: #587cfb!important;
+  background-color: transparent;
+  border: 2px solid #587cfb;
+  padding: 10px;
+  border-radius: 10%/50%;
+  transition: 0.3s;
+  margin: 0 5px;
+}
+
+.btn_sica_blueborder2:hover{
   color: #fff!important;
   background-color: #4756c3;
   border-color: #4756c3;
