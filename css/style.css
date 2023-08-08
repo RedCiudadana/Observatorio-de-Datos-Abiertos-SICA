@@ -19849,6 +19849,7 @@ select {
   border: 2px solid #fff;
   padding: 10px;
   border-radius: 15%/50%;
+  transition: 0.3s;
 }
 
 .btn_sica_blue{
@@ -19857,6 +19858,28 @@ select {
   border: 2px solid #587cfb;
   padding: 10px;
   border-radius: 15%/50%;
+  transition: 0.3s;
+}
+
+.btn_sica_blue2{
+  color: #fff!important;
+  background-color: #587cfb;
+  border: 2px solid #587cfb;
+  padding: 10px;
+  border-radius: 10%/50%;
+  transition: 0.3s;
+}
+
+.btn_sica_blue:hover{
+  color: #fff!important;
+  background-color: #4756c3;
+  border-color: #4756c3;
+}
+
+.btn_sica_blue2:hover{
+  color: #fff!important;
+  background-color: #4756c3;
+  border-color: #4756c3;
 }
 
 .redes_sica{
@@ -19889,4 +19912,27 @@ select {
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #46495f!important;
   opacity: 1; /* Firefox */
+}
+
+table{
+  width:100%;
+}
+
+table tr th{
+  background-color: #011234;
+  color: #fff;
+}
+
+table tr th, table tr td{
+  padding: 15px 5px;
+}
+
+table tr td{
+  border: 1px solid #c7cdd6;
+  width: 20%;
+}
+
+.blue{
+  color: #4756c3;
+  font-weight: 600;
 }
